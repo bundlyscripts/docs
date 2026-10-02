@@ -42,16 +42,6 @@
     "dark": "/images/logo-vector-primary.png"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Website",
-        "href": "https://bundlyscripts.com"
-      },
-      {
-        "label": "Store",
-        "href": "https://bundlyscripts.com/store"
-      }
-    ],
     "primary": {
       "type": "discord",
       "href": "https://discord.gg/CnQcfsw9G"

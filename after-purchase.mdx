@@ -1,0 +1,93 @@
+---
+title: "After you buy"
+description: "Find your purchase in the Cfx.re Portal, download it, and get it running on your FiveM server."
+sidebarTitle: "After you buy"
+icon: "download"
+---
+
+Checkout is handled by Tebex and licensing is tied to your Cfx.re account. After you pay, you do not receive a zip in email. You download the resource from the **Cfx.re Portal**.
+
+<Info>
+  Free resources follow the same path. Claim them from the [store](https://bundlyscripts.com/store), then download them from Granted Assets like any other purchase.
+</Info>
+
+## What happens after checkout
+
+<Steps>
+  <Step title="Tebex sends your receipt" icon="envelope">
+    Tebex emails a receipt to the address you used at checkout. Billing and refunds are handled by Tebex.
+  </Step>
+  <Step title="The resource is granted to your Cfx.re account" icon="key">
+    Delivery goes to the Cfx.re account you logged in with on [bundlyscripts.com](https://bundlyscripts.com) before paying. That is the account that owns the asset.
+  </Step>
+  <Step title="Discord roles are assigned" icon="discord" iconType="brands">
+    If you linked Discord in the cart before checkout, customer roles are assigned automatically. You can still join the [Discord](https://discord.gg/CnQcfsw9G) later for support.
+  </Step>
+</Steps>
+
+<Note>
+  Delivery can take a minute or two after payment clears. If Granted Assets is empty, wait briefly, then refresh.
+</Note>
+
+## Download from the Cfx.re Portal
+
+<Steps>
+  <Step title="Open Granted Assets">
+    Sign in to the Cfx.re Portal with the **same** FiveM account you used at checkout, then open [Granted Assets](https://portal.cfx.re/assets/granted-assets).
+
+    [Open Cfx.re Portal](https://portal.cfx.re/assets/granted-assets)
+  </Step>
+  <Step title="Find the Bundly resource">
+    Your purchases and free claims appear in the list. Select the resource you just bought.
+  </Step>
+  <Step title="Download the latest version">
+    Download the package and extract it. Keep the folder name as it shipped, for example `bundly-loadingscreen`.
+  </Step>
+  <Step title="Drop it into your server">
+    Copy the folder into your server `resources` directory. A dedicated folder such as `resources/[bundlyscripts]` keeps Bundly resources together.
+  </Step>
+  <Step title="Ensure it in server.cfg">
+    Add the resource to `server.cfg` and restart, or start it live:
+
+    ```cfg
+    ensure bundly-loadingscreen
+    ```
+
+    If you keep Bundly resources in a folder, you can start the whole folder:
+
+    ```cfg
+    ensure [bundlyscripts]
+    ```
+  </Step>
+</Steps>
+
+<Warning>
+  The purchase is bound to the Cfx.re account used at checkout. If you logged into the store with a different account than the one that runs the server, the asset will not appear on the server account.
+</Warning>
+
+## Updates
+
+Updates are published through the Cfx.re Portal, not as a separate download link.
+
+<Steps>
+  <Step title="Download the new version">
+    Open [Granted Assets](https://portal.cfx.re/assets/granted-assets) and download the latest build of the resource.
+  </Step>
+  <Step title="Replace the resource folder">
+    Stop the resource, replace the old folder with the new one, then start it again. Do not merge two versions on top of each other.
+  </Step>
+  <Step title="Keep your config">
+    Copy your edited `config` file back in after you replace the folder, then check the changelog or docs for any new options.
+  </Step>
+</Steps>
+
+## Need help?
+
+<Columns cols={2}>
+  <Card title="Documentation" icon="book" href="/">
+    Setup and configuration guides for each resource live in these docs.
+  </Card>
+  <Card title="Discord support" icon="discord" iconType="brands" href="https://discord.gg/CnQcfsw9G">
+    Open a ticket on Discord and talk to the team directly.
+  </Card>
+</Columns>

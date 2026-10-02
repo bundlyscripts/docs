@@ -12,12 +12,28 @@
     "dark": "/images/logo-vector-primary.png"
   },
   "navigation": {
-    "pages": [
+    "groups": [
       {
         "group": "Getting Started",
+        "icon": "rocket",
         "pages": [
           "index",
-          "quickstart"
+          "after-purchase"
+        ]
+      },
+      {
+        "group": "Free Resources",
+        "icon": "gift",
+        "pages": [
+          {
+            "group": "Loading Screen",
+            "icon": "spinner",
+            "expanded": true,
+            "pages": [
+              "free-resources/loading-screen/installation",
+              "free-resources/loading-screen/configuration"
+            ]
+          }
         ]
       }
     ]
@@ -27,6 +43,16 @@
     "dark": "/images/logo-vector-primary.png"
   },
   "navbar": {
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://bundlyscripts.com"
+      },
+      {
+        "label": "Store",
+        "href": "https://bundlyscripts.com/store"
+      }
+    ],
     "primary": {
       "type": "discord",
       "href": "https://discord.gg/CnQcfsw9G"

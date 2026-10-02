@@ -28,10 +28,9 @@
           {
             "group": "Loading Screen",
             "icon": "spinner",
-            "expanded": true,
+            "expanded": false,
             "pages": [
-              "free-resources/loading-screen/installation",
-              "free-resources/loading-screen/configuration"
+              "free-resources/loading-screen/installation"
             ]
           }
         ]

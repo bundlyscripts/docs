@@ -9,24 +9,6 @@ Bundly Loading Screen is a **standalone** loading screen for FiveM. Players see 
 
 It works with **Qbox**, **QBCore**, **ESX**, or a server with no framework.
 
-## What you get
-
-- Two-line server name, slogan, and logo
-- Social buttons that open in the player's browser
-- Discord button
-- Background image or background video
-- Music player with playlist, pause, and volume, or video audio on the same controls
-- Live loading progress and status messages from the game
-- One `config.js` file, no build step
-
-## Before you start
-
-- A FiveM server you can restart
-- The resource downloaded from [Granted Assets](https://portal.cfx.re/assets/granted-assets) after you claim it on the [store](https://bundlyscripts.com/store)
-- No other loading screen resource running at the same time
-
-If you have not downloaded it yet, follow [After you buy](/after-purchase).
-
 ## Install
 
 <Steps>
@@ -38,13 +20,6 @@ If you have not downloaded it yet, follow [After you buy](/after-purchase).
     - resources/
       - \[bundlyscripts]/
         - bundly-loadingscreen/
-          - config.js
-          - fxmanifest.lua
-          - web/
-            - index.html
-            - css/
-            - js/
-            - assets/
 
     </FileTree>
   </Step>
@@ -57,62 +32,8 @@ If you have not downloaded it yet, follow [After you buy](/after-purchase).
     ```cfg
     ensure bundly-loadingscreen
     ```
-
-    If you already start a `[bundlyscripts]` folder, that is enough:
-
-    ```cfg
-    ensure [bundlyscripts]
-    ```
-  </Step>
-  <Step title="Restart the server">
-    Restart the server, then connect. You should see the Bundly loading screen with a cursor, so players can use the music controls and links.
   </Step>
 </Steps>
-
-## Folder layout
-
-Edit **`config.js`** and files under **`web/assets/`**. Leave `fxmanifest.lua` and the `web` scripts as they are.
-
-<FileTree>
-
-- bundly-loadingscreen/
-  - config.js
-  - fxmanifest.lua
-  - web/
-    - index.html
-    - css/main.css
-    - js/main.js
-    - assets/
-      - logo.png
-      - background.jpg
-      - music.mp3
-
-</FileTree>
-
-Paths in `config.js` are relative to `web/index.html`. A logo set to `assets/logo.png` is the file at `web/assets/logo.png`.
-
-## Framework notes
-
-The resource sets `loadscreen_manual_shutdown`. The screen stays up until a client script calls `ShutdownLoadingScreenNui()`.
-
-| Framework | What happens |
-| --- | --- |
-| Qbox | `qbx_core` already shuts the loading screen down when the player is ready. |
-| QBCore | `qb-core` and `qb-multicharacter` already call the shutdown natives. |
-| ESX | Most ESX setups shut it down through spawn or multichar. If the screen never closes, your spawn/multichar resource needs `ShutdownLoadingScreenNui()`. |
-| No framework | Add a small client script that calls `ShutdownLoadingScreenNui()` when the player is in-game, or the screen will stay up. |
-
-<Tip>
-  On Qbox, `setr loadscreen:externalShutdown true` in `server.cfg` is for Qbox's own loadscreen settings. It does not replace Bundly Loading Screen. You still need this resource ensured and any other loadscreen stopped.
-</Tip>
-
-## Preview without the server
-
-Open `web/index.html` in a browser to preview branding, music, and layout. Outside FiveM the progress bar animates on its own so you can see the UI.
-
-<Note>
-  Social and Discord buttons only open URLs. Background, logo, and music must be local files inside the resource. Remote streams are ignored.
-</Note>
 
 ## Next step
 
